@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  font-size: 16px;
+  font-family: 'PT Sans', sans-serif;
+  background: #4d515e;
+  margin: 0;
+  padding: 0;
+}
+
+.letters {
+  display: flex;
+  flex-flow: column wrap;
+  width: 150px;
+  padding: 10px 0 10px 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  opacity: 0;
+  animation-name: visible;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.btn {
+  border: 1px solid #fff;
+  color: #000;
+  cursor: pointer;
+  padding: 5px 20px 5px 20px;
+  font-size: .7em;
+  background-color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+}
+
+
+@keyframes visible {
+  0% {
+   opacity: 0;
+   transform: translateX(-200px);
+  }
+
+  100% {
+   opacity: 1;
+   transform: translateX(0);
+  }
+}
+
+
+.letters span {
+  display: inline-block;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+
+img.git-logo-link {
+  width: 50px;
+  height: 50px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/* Slider Styles */
+.img-section {
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 760px;
+  border: 1px solid #fff;
+  margin: auto;
+  height: auto;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.main-img img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.imgs img {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes fadeIn {
+  0% {
+   opacity: 0;
+  }
+
+  100% {
+   opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn .5s ease-in 1 forwards;
+}
+
+/* End Slider Styles */
